@@ -1,0 +1,14 @@
+{
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "overrides": [
+    {
+      "files": "*.{vue,js,jsx}",
+      "options": {
+        "tabWidth": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+/*=========== Week Bar ============*/
+
+.week-bar {
+    display: flex;
+    align-items: center;
+    .week-nav {
+      margin-top: 13px;
+      & > div {
+        margin-top: 3px;
+        display: inline-block;
+        & > small {
+          display: block;
+          font-size: 12px;
+          line-height: 12px;
+          text-align: center;
+          color: #9b9b9b;
+        }
+      }
+      .v-pagination__navigation {
+        min-width: 0;
+        height: 28px;
+        width: 28px;
+        vertical-align: top;
+        margin: 0;
+        &:not(:disabled) {
+          box-shadow: 0px 0px 1px -2px rgba(0, 0, 0, 0.2), 0px 0px 2px 0px rgba(0, 0, 0, 0.14),
+            0px 0px 5px 0px rgba(0, 0, 0, 0.12) !important;
+        }
+      }
+    }
+  }
+  
+  // Mobile Week Bar
+  .week-form-wrap {
+    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 999;
+    opacity: 0;
+    .close-btn {
+      position: absolute;
+      right: 0.5rem;
+      top: 2rem;
+    }
+    .centered {
+      height: 100%;
+      padding: 0 1.875rem; //0 30px;
+    }
+    &.week-slide {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

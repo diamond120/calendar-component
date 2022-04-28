@@ -1,0 +1,225 @@
+/*========== Custome Variable ==========*/
+// App Global Font Size
+$html-font-size: 16px;
+
+//App Background Scale
+$primary: #5dc8e0 !default;
+$secondary: #2695ad !default;
+$success: #00d014 !default;
+$info: #00d0bd !default;
+$warning: #ffb70f !default;
+$danger: #ff3739 !default;
+$pink: #fa0055 !default;
+$blue: #2e62ff !default;
+$purple: #2b314a !default;
+$light: #ffffff !default;
+$dark: #000000 !default;
+$base: #efefef !default;
+$base-light: #fafafa !default;
+
+$primary1: #5dc8e0 !default;
+$primary2: #82e4fa !default;
+$primary3: #b8f2ff !default;
+
+// Focus, Transition, Meeting consistence
+$focus-color: #0f677a !default;
+$transition-color: #2695ad !default;
+$meeting-color: #5dc8e0 !default;
+
+$radial-focus-color: radial-gradient(#2695ad, #0f677a);
+$radial-transition-color: radial-gradient(#5dc8e0, #2695ad);
+$radial-meeting-color: radial-gradient(#82e4fa, #5dc8e0);
+
+$linear-focus-color: linear-gradient(180deg, #2695ad, #0f677a);
+$linear-transition-color: linear-gradient(180deg, #5dc8e0, #2695ad);
+$linear-meeting-color: linear-gradient(180deg, #82e4fa, #5dc8e0);
+
+// App Text Scale
+$gray-dark: #9b9b9b !default;
+$gray: #d8d8d8 !default;
+$gray-light: #ebebeb !default;
+$gray-lighter: #f5f5f5 !default;
+$light-dark: #3d3d3d !default;
+
+//App Theme Color
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'success': $success,
+    'info': $info,
+    'warning': $warning,
+    'danger': $danger,
+    'light': $light,
+    'dark': $dark,
+    'blue': $blue,
+  ),
+  $theme-colors
+);
+
+// Settings for the `<body>` element.
+$body-bg: $base;
+$body-color: rgba(0, 0, 0, 0.6);
+$font-family-base: 'Roboto', sans-serif;
+$border-color: #ebedf2;
+
+// Setting for the Typograpgy elements.
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-xxl: 2rem !default;
+$font-size-xl: 1.65rem !default;
+$font-size-lg: 1.25rem !default;
+$font-size-md: 1rem !default;
+$font-size-sm: 0.875rem !default;
+$font-size-xs: 0.75rem !default;
+$font-size-xxs: 0.65rem !default;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semi-bold: 500;
+$font-weight-bold: 700;
+
+// Setting For Heading Element
+$h1-font-size: 1.75rem !default; // 28px
+$h2-font-size: 1.5rem !default; // 24px
+$h3-font-size: 1.375rem !default; // 22px
+$h4-font-size: 1.125rem !default; // 20px
+$h5-font-size: 1rem !default; // 16px
+$h6-font-size: 0.875rem !default; // 14px
+
+// Gradient Theme Color
+$light-primary: linear-gradient(180deg, #0f677a 0%, #2695ad 100%); // Primary
+$light-pink: linear-gradient(180deg, #b91372 0%, #33080d 100%); // Pink
+$light-success: linear-gradient(180deg, #00d0bd 0%, #007adf 100%); // success
+$light-purple: linear-gradient(0deg, #f53844 0%, #42378f 100%); // purple
+$light-warning: linear-gradient(0deg, #b02e0c 0%, #ffb70f 100%); // warning
+$light-gray: linear-gradient(180deg, #09203f 0%, #537895 100%);
+
+// App Header Light Color
+$app-header-light-color: #636363;
+
+// App Custom Card
+$card-bg: #fff;
+$card-border-radius: 0px;
+$card-border: 1px solid $gray-dark;
+$card-spacing: 1.25rem 1.25rem; //20px 20px
+$card-margin-bottom: 0rem; //0px
+$card-shadow: 0 1px 2px 1px $gray;
+$card-hover-shadow: 0 1px 15px 5px $gray;
+
+// Card Title
+$card-title-color: rgba(0, 0, 0, 0.4);
+$card-title-font-size: 1rem; //22px;
+$card-title-transform: capitalize;
+$card-title-weight: 400;
+$card-title-spacing: 0.15rem 0.75rem; //16px 20px
+$card-title-border: 2px solid rgba(0, 0, 0, 0.1);
+$card-footer-spacing: 1rem 1.25rem; //16px 20px
+
+// Card Contextual link
+$contextual-link-size: 1.25rem; //20px
+$contextual-link-color: $primary;
+
+// Breadcrumb Variable
+$breadcrumb-font-weight: 500;
+$breadcrumb-font-color: $primary;
+$breadcrumb-font-size: 1.5rem; //24px;
+
+// Dashboard Tooltip Title
+$d-title-color: $gray-dark;
+$d-title-font-size: 0.8125rem; //13px;
+$d-title-transform: uppercase;
+
+// Dark theme
+$dark-bg: #2c3644;
+$dark-bg-color: #fff;
+$dark-bg-container: #303030;
+$dark-border-color: rgba(0, 0, 0, 0.2);
+
+// Label Variable
+$label-spacing: 0.2rem 0.5rem 0.1rem;
+$label-font-color: $light;
+$label-font-size: 75%;
+$label-font-weight: 400;
+$label-transform: uppercase;
+$label-border-radius: 0.25rem;
+
+$label-primary: $light-primary;
+$label-success: $light-success;
+$label-pink: $light-pink;
+$label-warning: $light-warning;
+$label-purple: $light-purple;
+
+// Button Gradient Variable
+$btn-gradient-primary: $light-primary;
+$btn-gradient-success: $light-success;
+$btn-gradient-pink: $light-pink;
+$btn-gradient-warning: $light-warning;
+$btn-gradient-purple: $light-purple;
+
+// Button Simple Variable
+$btn-primary: $primary;
+$btn-secondary: $secondary;
+$btn-success: $success;
+$btn-info: $info;
+$btn-warning: $warning;
+$btn-danger: $danger;
+
+$btn-font-weight: 500;
+$btn-icon-font-size: 1.125rem;
+$btn-border-radius: 3px;
+
+// Input Variable
+$input-border-color: #d7dce4;
+
+// Sidebar Variable
+
+$sidebar-bg: #2e3344;
+$sidebar-width: 250px;
+$sidebar-nav-color: #1d2433;
+$sidebar-nav-text-size: 14px;
+$sidebar-nav-active-color: $light;
+$sidebar-nav-active-bg: $primary;
+$sidebar-nav-spacing: 20px;
+$sidebar-nav-font-weight: 400;
+$sidebar-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+$sidebar-subnav-font-size: $sidebar-nav-text-size;
+$sidebar-subnav-font-color: $sidebar-nav-color;
+$sidebar-icon-color: $primary;
+
+//Heder Variable
+
+$header-box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+  0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+// Back To Top Variable
+$back-to-top-bg: $primary;
+
+// Loader Variable
+$loader-bg-1: $warning;
+$loader-bg-2: $primary;
+$loader-overlay: rgba(255, 255, 255, 0.9);
+
+// Dragula
+$dragula-bg: $primary;
+$dragula-color: $light;
+
+// Calender Variable
+$calender-head-bg: $primary;
+$calender-event-bg: $danger;
+
+// Horizontal Menu sidebar Variable
+$hoz-menu-bg: $light;
+$hoz-nav-link-color: $body-color;
+$hoz-nav-font-size: 0.875rem; //14px
+$hoz-nav-link-spacing: 0.9375rem 1.563rem 0.9375rem 1.563rem; //15px 30px;
+$hoz-nav-link-hover-bg: $base-light;
+$hoz-menu-height: 3.125rem; //50px;
+$hoz-sub-menu-width: 12rem;
+$hoz-box-shadow: 0 2px 10px 0 rgba(204, 204, 204, 0.5);
+$hoz-sub-menu-box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.09);
+
+//Custom-bg
+$aqua-bg: #dfeaff;
+$gray-bg: #f5f5f5;

@@ -1,0 +1,48 @@
+/*================= Pages ================*/
+
+/*====================== Blog-page ================*/
+
+.blog-list {
+  .blog-sidebar {
+    .category-widget {
+      ul {
+        li {
+          border-bottom: 1px solid $border-color;
+          transition: all 0.3s ease-in-out;
+          padding: 0 1rem;
+          a {
+            color: $body-color;
+            padding: 0.5rem 0rem;
+            display: block;
+          }
+          &:hover {
+            border-color: $primary !important;
+            padding: 0 2rem;
+          }
+        }
+      }
+    }
+    .tags-widget {
+      ul {
+        li {
+          display: inline-block;
+          a {
+            border: 1px solid $border-color;
+            margin: 4px 4px 0 0;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary;
+            color: $light;
+            padding: 5px 10px;
+            &:hover {
+              background-color: transparent;
+              color: $primary !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

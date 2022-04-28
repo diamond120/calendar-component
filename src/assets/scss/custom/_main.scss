@@ -1,0 +1,367 @@
+/*======== Card ========*/
+.app-card {
+  background-color: $card-bg;
+  border-radius: $card-border-radius;
+  margin-bottom: $card-margin-bottom;
+  box-shadow: $card-shadow;
+  transition: all 0.4s ease-in-out 0s;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  .app-card-title {
+    min-height: 40px;
+    position: relative;
+    padding: $card-title-spacing;
+    border-bottom: $card-title-border;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h3,
+    .app-title {
+      font-size: $card-title-font-size;
+      color: $card-title-color;
+      text-transform: $card-title-transform;
+      font-weight: $card-title-weight;
+      margin: 0;
+    }
+  }
+  .app-contextual-link {
+    .v-btn {
+      .v-icon {
+        color: $contextual-link-color;
+      }
+    }
+  }
+  .app-card-content {
+    padding: $card-spacing;
+  }
+  .app-full-content {
+    padding: 0;
+  }
+  .app-footer {
+    padding: $card-footer-spacing;
+    border-top: $card-border;
+    .v-btn {
+      margin: 0;
+    }
+  }
+  &:hover {
+    box-shadow: $card-hover-shadow;
+  }
+}
+
+.app-card-action {
+  background-color: $base-light !important;
+  overflow: hidden;
+  .v-list__tile {
+    height: 40px;
+    font-size: 0.875rem;
+    margin: 0.3125rem;
+    background-color: $light;
+    box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.02);
+    span {
+      transition: all 0.4s ease-in-out;
+    }
+    &:hover {
+      background-color: $light !important;
+      span {
+        color: $primary !important;
+      }
+    }
+  }
+}
+
+.content {
+  overflow-y: hidden;
+}
+.dash-title {
+  margin: 0.9375rem 0; //15px;
+  span {
+    color: $d-title-color;
+    font-size: $d-title-font-size;
+    text-transform: $d-title-transform;
+    letter-spacing: 2px;
+    font-weight: bold;
+    a {
+      vertical-align: 2px;
+      i {
+        font-size: $d-title-font-size;
+        color: $gray-dark;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.dash-card-wrap,
+.card {
+  transition: all 0.4s ease-in-out 0s;
+  &:hover {
+    box-shadow: $card-hover-shadow;
+  }
+}
+#nprogress .bar {
+  background: $secondary !important;
+}
+#nprogress .spinner-icon {
+  border-top-color: $secondary !important;
+  border-left-color: $secondary !important;
+}
+
+.kpi-card {
+  .kpi-heading {
+    h3 {
+      color: rgba(0, 0, 0, 0.6);
+      font-size: $font-size-sm;
+      font-weight: $font-weight-bold;
+    }
+  }
+  .kpi-content {
+    .kpi-subheader {
+      color: rgba(0, 0, 0, 0.4);
+      font-size: $font-size-sm;
+      font-weight: $font-weight-normal;
+    }
+  }
+}
+/*=========== Stats Element ============*/
+
+.stats-card-container {
+  font-size: $label-font-size;
+  .grey-bg-block {
+    margin: auto -24px !important;
+    padding: 0 12px !important;
+    background: rgba($color: $gray-dark, $alpha: 0.15);
+  }
+  .dash-bg-block {
+    margin: 0px -24px !important;
+    background: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 2px,
+      lighten($color: $primary, $amount: 30%) 2px,
+      lighten($color: $primary, $amount: 30%) 4px
+    );
+  }
+}
+
+.custom-tab-wrap {
+  a {
+    color: $card-title-color;
+    background: $body-bg;
+
+    &.meeting {
+      background: $meeting-color;
+    }
+    &.transition {
+      background: $transition-color;
+    }
+    &.focus {
+      background: $focus-color;
+    }
+
+    .tab-avatar {
+      &.meeting {
+        background: $meeting-color;
+      }
+      &.transition {
+        background: $transition-color;
+      }
+      &.focus {
+        background: $focus-color;
+      }
+    }
+  }
+}
+
+.v-badge {
+  &.meeting {
+    background: $linear-meeting-color;
+  }
+  &.transition {
+    background: $linear-transition-color;
+  }
+  &.focus {
+    background: $linear-focus-color;
+  }
+}
+
+.chart-title {
+  font-size: 0.95 * $font-size-md;
+  font-weight: $font-weight-semi-bold;
+}
+
+.metric-label {
+  font-size: 1.15 * $font-size-xs;
+  font-weight: $font-weight-semi-bold;
+}
+
+.stats-chip {
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+
+/*=========== Invite Box ============*/
+.invite-dropdown {
+  background-color: $base-light;
+  .dropdown-content {
+    width: 100%;
+    .dropdown-top {
+      padding: 1rem 1.25rem;
+    }
+    .dropdown-list {
+      background: transparent !important;
+      > div {
+        width: 97%;
+        display: block;
+        box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.02);
+        margin: 0.3125rem;
+        .v-list__tile {
+          background-color: $light;
+          span {
+            font-size: $font-size-sm;
+            transition: color 0.3s ease;
+          }
+          &:hover {
+            span {
+              color: $primary !important;
+            }
+            background-color: $light !important;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 599px) {
+    .dropdown-content {
+      .add-btn {
+        height: 40px !important;
+      }
+    }
+  }
+  .invite-list {
+    > div {
+      .v-list__tile {
+        .trash-icon {
+          opacity: 0;
+          transition: opacity 0.3s linear;
+        }
+        &:hover {
+          .trash-icon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*=========== Right Sidebar ============*/
+.rightsidebar-tabs .v-tabs__container {
+  background-color: $primary;
+}
+
+.rightsidebar-scroll-area {
+  position: relative;
+  height: 80vh;
+  .v-timeline-item__dot {
+    width: 18px !important;
+    height: 18px;
+    left: 10px;
+  }
+  .v-timeline-item__body {
+    max-width: calc(100% - 40px);
+  }
+  .v-timeline-item__body h4 {
+    font-weight: bolder;
+    background: #fff;
+    border: 2px solid darkgray;
+    padding: 10px 0 10px 12px;
+    span:first-child {
+      color: $primary;
+    }
+    span:nth-child(2) {
+      color: #ababab;
+    }
+  }
+  .gradient-border {
+    --borderWidth: 3px;
+    background: #1d1f20;
+    position: relative;
+    border-radius: var(--borderWidth);
+  }
+  .gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    border-radius: calc(2 * var(--borderWidth));
+    z-index: -1;
+    animation: animatedgradient 3s ease alternate infinite;
+    background-size: 300% 300%;
+  }
+  .raf-card {
+    .v-list__tile {
+      height: 28px;
+      $gcolor: rgba(
+        $color: $primary,
+        $alpha: 0.35,
+      );
+      $g1: linear-gradient(to right, $gcolor, $gcolor);
+
+      &.highlight {
+        font-style: normal;
+        border-radius: 0.2em;
+        background: $g1;
+        transform: skewX(-10deg);
+        box-decoration-break: clone;
+      }
+    }
+    .v-list__tile__title {
+      font-size: $font-size-xs;
+    }
+  }
+  .details-card {
+    .v-list__tile {
+      height: 20px;
+    }
+  }
+  .v-textarea.v-text-field--enclosed textarea {
+    margin-top: 0px;
+    font-size: $font-size-xs;
+  }
+  .v-text-field.v-text-field--enclosed .v-text-field__details {
+    height: 0px;
+  }
+  .v-alert {
+    padding: 3px;
+    > div {
+      font-size: 10px;
+    }
+    .v-alert__icon.v-icon,
+    .v-alert__dismissible .v-icon {
+      font-size: 17px;
+    }
+  }
+  @keyframes animatedgradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+/*=========== Skeleton ============*/
+.skeleton-list li {
+  height: 20px !important;
+  margin: 12px 0 !important;
+}
+.skeleton-list li.enable-animation::before {
+  z-index: 1 !important;
+}

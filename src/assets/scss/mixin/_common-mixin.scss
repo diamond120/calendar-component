@@ -1,0 +1,101 @@
+/*======== All Common Mixin Include Is Here ========*/
+//--- Border mixins ---//
+@mixin border($style, $color, $sides) {
+  @if ($style != '') {
+    @if ($sides == '') {
+      border: $style $color;
+    } @else {
+      @each $side in $sides {
+        @if ($side == 'top' or $side == 'right' or $side == 'bottom' or $side == 'left') {
+          border-#{$side}: $style $color;
+        }
+      }
+    }
+  }
+}
+//--- For color opacity ---//
+@mixin background-opacity($color, $opacity) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+/**
+  *  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+  * 
+  * 									Other Mixins
+  * 
+  *  ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── 
+  **/
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model; // Safari <= 5
+  -moz-box-sizing: $box-model; // Firefox <= 19
+  -ms-box-sizing: $box-model;
+  -o-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin border-radii($topleft, $topright, $bottomright, $bottomleft) {
+  border-top-left-radius: $topleft;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  -webkit-border-top-left-radius: $topleft;
+  -webkit-border-top-right-radius: $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+  -moz-border-radius-topleft: $topleft;
+  -moz-border-radius-topright: $topright;
+  -moz-border-radius-bottomright: $bottomright;
+  -moz-border-radius-bottomleft: $bottomleft;
+  background-clip: padding-box; // stops bg color from leaking outside the border:
+}
+
+@mixin box-shadow($h-offset, $v-offset, $blur, $spread, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $h-offset $v-offset $blur $spread $color;
+    -moz-box-shadow: inset $h-offset $v-offset $blur $spread $color;
+    box-shadow: inset $h-offset $v-offset $blur $spread $color;
+  } @else {
+    -webkit-box-shadow: $h-offset $v-offset $blur $spread $color;
+    -moz-box-shadow: $h-offset $v-offset $blur $spread $color;
+    box-shadow: $h-offset $v-offset $blur $spread $color;
+  }
+}
+
+@mixin background-size($sizeX, $sizeY) {
+  -webkit-background-size: $sizeX, $sizeY;
+  background-size: $sizeX, $sizeY;
+}
+
+@mixin animate($transition-time: 0.3s, $transition-function: easy-in-out) {
+  -webkit-transition: all $transition-time $transition-function;
+  -moz-transition: all $transition-time $transition-function;
+  -ms-transition: all $transition-time $transition-function;
+  -o-transition: all $transition-time $transition-function;
+  transition: all $transition-time $transition-function;
+}
+
+@mixin translate($transX, $transY: 0px) {
+  -webkit-transform: translate($transX, $transY);
+  -moz-transform: translate($transX, $transY);
+  transform: translate($transX, $transY);
+}
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin rotateAndTranslate($deg, $transX, $transY) {
+  -webkit-transform: rotate($deg) translate($transX, $transY);
+  -moz-transform: rotate($deg) translate($transX, $transY);
+  transform: rotate($deg) translate($transX, $transY);
+}
